@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import ProblemSection from './sections/Problem';
 import SolutionSection from './sections/Solution';
+import HowItWorksSection from './sections/HowItWorks';
 import ArchitectureDiagram from './sections/Architecture';
 import MachineFingerprint from './sections/Fingerprint';
 import LiveSimulation from './sections/LiveSimulation';
@@ -29,6 +30,7 @@ export default function App() {
             <Hero />
             <ProblemSection />
             <SolutionSection />
+            <HowItWorksSection />
             <ArchitectureDiagram />
             <MachineFingerprint />
             <LiveSimulation />

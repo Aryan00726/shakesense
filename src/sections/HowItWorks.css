@@ -1,0 +1,159 @@
+.howitworks {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 0;
+}
+
+.howitworks__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 5rem;
+}
+
+.howitworks__steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: nowrap; /* We want them all in one row like the image */
+  overflow-x: auto;
+  padding-bottom: 2rem;
+}
+
+.howitworks__step-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 200px; /* Ensure they don't shrink too much */
+}
+
+/* Remove margin/arrow for the last item handled by flex-wrap or just last-child */
+.howitworks__step-wrapper:last-child {
+  flex: 0.8; /* Slight tweak if needed */
+}
+
+.howitworks__step {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.howitworks__canvas-container {
+  width: 100%;
+  height: 220px;
+  background: radial-gradient(circle at center, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
+  border-radius: 12px;
+  position: relative;
+}
+
+/* Style for HTML labels inside Canvas */
+.howitworks__label {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  background: rgba(10, 15, 26, 0.8);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.howitworks__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.howitworks__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.howitworks__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.howitworks__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.howitworks__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: -150px; /* Align arrow somewhat near the 3D models vertically */
+}
+
+.howitworks__status-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(0, 30, 20, 0.7);
+  border: 1px solid #00e5a0;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
+.howitworks__status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00e5a0;
+  box-shadow: 0 0 10px #00e5a0;
+}
+
+.howitworks__status-title {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.howitworks__status-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #00e5a0;
+}
+
+@media (max-width: 1024px) {
+  .howitworks__steps {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .howitworks__step-wrapper {
+    flex: 1 1 40%;
+    min-width: 300px;
+  }
+  .howitworks__arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .howitworks__step-wrapper {
+    flex: 1 1 100%;
+  }
+}

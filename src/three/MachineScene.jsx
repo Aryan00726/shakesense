@@ -41,7 +41,7 @@ function BearingRing({ position, radius, count, color }) {
 }
 
 /* ── Vibration wave rings emanating from the sensor ── */
-function VibrationWaves({ sensorPos, status }) {
+export function VibrationWaves({ sensorPos, status }) {
   const wavesRef = useRef([]);
   const waveCount = 4;
   const color = status === 'critical' ? '#ff3b5c' : status === 'warning' ? '#f5a623' : '#00d4ff';
@@ -71,7 +71,7 @@ function VibrationWaves({ sensorPos, status }) {
 }
 
 /* ── Data particles flowing from sensor ── */
-function DataParticles({ status }) {
+export function DataParticles({ status }) {
   const ref = useRef();
   const count = 40;
 
@@ -128,7 +128,7 @@ function DataParticles({ status }) {
 }
 
 /* ── Small sensor box attached to the motor ── */
-function SensorUnit({ position, status }) {
+export function SensorUnit({ position, status }) {
   const ref = useRef();
   const glowColor = status === 'critical' ? '#ff3b5c' : status === 'warning' ? '#f5a623' : '#00e5a0';
 
@@ -166,7 +166,7 @@ function SensorUnit({ position, status }) {
 }
 
 /* ── Main motor body ── */
-function MotorBody({ status }) {
+export function MotorBody({ status }) {
   const shaftRef = useRef();
   const fanRef = useRef();
 
