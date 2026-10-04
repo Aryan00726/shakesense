@@ -30,7 +30,7 @@ export default function ArchitectureDiagram() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <span className="eyebrow">ARCHITECTURE</span>
-          <h2 className="section-title">From Vibration To Insight</h2>
+          <h2 className="section-title">System Data Flow</h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
             Hover over each component to understand how data flows through the system.
           </p>
