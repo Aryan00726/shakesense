@@ -67,7 +67,9 @@ function Scene3D() {
       />
 
       {/* Environment */}
-      <Environment preset="night" />
+      <Suspense fallback={null}>
+        <Environment preset="night" />
+      </Suspense>
     </>
   );
 }
