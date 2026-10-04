@@ -1,7 +1,7 @@
-/* ── SOLUTION SECTION ── */
 .solution {
   position: relative;
   background: var(--color-bg-deepest);
+  padding-bottom: 2rem;
 }
 
 .solution__header {

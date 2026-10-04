@@ -326,6 +326,7 @@ body {
   letter-spacing: var(--tracking-wide);
   line-height: var(--leading-relaxed);
   max-width: 600px;
+  margin: 0 auto;
 }
 
 /* ── BUTTON SYSTEM ── */
