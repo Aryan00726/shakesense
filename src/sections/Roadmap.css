@@ -1,0 +1,198 @@
+/* ── ROADMAP SECTION ── */
+.roadmap {
+  position: relative;
+  background: var(--color-bg-deepest);
+}
+
+.roadmap__header {
+  text-align: center;
+  margin-bottom: var(--space-20);
+}
+
+.roadmap__header .eyebrow {
+  display: block;
+  margin-bottom: var(--space-6);
+}
+
+.roadmap__timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--space-8) 0;
+}
+
+.roadmap__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--color-accent-dim), var(--color-accent-dim), transparent);
+  transform: translateX(-50%);
+}
+
+.roadmap__phase {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  padding-right: var(--space-10);
+  position: relative;
+  margin-bottom: var(--space-8);
+}
+
+.roadmap__phase:nth-child(even) {
+  align-self: flex-end;
+  justify-content: flex-start;
+  padding-left: var(--space-10);
+  padding-right: 0;
+  margin-left: 50%;
+}
+
+.roadmap__phase-marker {
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: var(--color-bg-deepest);
+  border: 2px solid var(--color-accent-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.roadmap__phase:nth-child(even) .roadmap__phase-marker {
+  left: -8px;
+  right: auto;
+}
+
+.roadmap__phase-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+/* Active State */
+.roadmap__phase--active .roadmap__phase-marker {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 12px var(--color-accent-glow);
+}
+
+.roadmap__phase--active .roadmap__phase-dot {
+  background: var(--color-accent);
+}
+
+.roadmap__phase--active .roadmap__phase-content {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+}
+
+.roadmap__phase--active .roadmap__phase-status {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background: rgba(0, 212, 255, 0.1);
+}
+
+/* Future State */
+.roadmap__phase--future {
+  opacity: 0.6;
+}
+.roadmap__phase--future .roadmap__phase-content {
+  background: transparent;
+  border: 1px dashed var(--color-glass-border-hover);
+}
+.roadmap__phase--future:hover {
+  opacity: 1;
+}
+
+/* Content Card */
+.roadmap__phase-content {
+  width: 100%;
+  padding: var(--space-6);
+  text-align: left;
+}
+
+.roadmap__phase-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-3);
+}
+
+.roadmap__phase-number {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.roadmap__phase-status {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: var(--tracking-wider);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: var(--border-subtle);
+  color: var(--color-text-secondary);
+}
+
+.roadmap__phase-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-4);
+}
+
+.roadmap__phase-items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.roadmap__phase-items li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+.roadmap__phase-bullet {
+  flex-shrink: 0;
+  width: 4px;
+  height: 4px;
+  background: var(--color-text-muted);
+  border-radius: 50%;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roadmap__line {
+    left: 20px;
+  }
+
+  .roadmap__phase,
+  .roadmap__phase:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 50px;
+    padding-right: 0;
+    justify-content: flex-start;
+  }
+
+  .roadmap__phase-marker,
+  .roadmap__phase:nth-child(even) .roadmap__phase-marker {
+    left: 12px;
+    right: auto;
+  }
+}
