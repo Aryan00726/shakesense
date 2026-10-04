@@ -28,14 +28,16 @@ function Scene3D() {
 
       {/* Machine */}
       <Float speed={0.5} rotationIntensity={0.05} floatIntensity={0.1}>
-        <MachineScene status="healthy" />
+        <group position={[1.8, -0.2, 0]}>
+          <MachineScene status="healthy" />
+        </group>
       </Float>
 
 
 
       {/* Ground reflection */}
       <ContactShadows
-        position={[0, -1.1, 0]}
+        position={[1.8, -1.3, 0]}
         opacity={0.2}
         scale={6}
         blur={2}
