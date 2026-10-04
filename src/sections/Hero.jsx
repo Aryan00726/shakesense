@@ -1,34 +1,12 @@
 import { Suspense, lazy, useRef } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { Environment, Float, Html, ContactShadows } from '@react-three/drei';
+import { Environment, Float, ContactShadows } from '@react-three/drei';
 import { motion } from 'framer-motion';
 import { HERO } from '../data/siteConfig';
 import MachineScene from '../three/MachineScene';
 import './Hero.css';
 
-/* Floating labels around the 3D scene */
-function SceneAnnotations() {
-  const annotations = [
-    { text: 'VIBRATION', pos: [-1.4, 0.6, 0.5] },
-    { text: 'FFT', pos: [1.5, 0.3, -0.3] },
-    { text: 'EDGE INFERENCE', pos: [-1.2, -0.4, 0.8] },
-    { text: 'HEALTH SCORE', pos: [1.3, -0.6, 0.5] },
-    { text: 'MACHINE FINGERPRINT', pos: [0, 1.5, 0.6] },
-  ];
 
-  return (
-    <>
-      {annotations.map((ann, i) => (
-        <Html key={i} position={ann.pos} center distanceFactor={6}>
-          <div className="hero-annotation" style={{ animationDelay: `${i * 0.8}s` }}>
-            <span className="hero-annotation__dot" />
-            <span className="hero-annotation__text">{ann.text}</span>
-          </div>
-        </Html>
-      ))}
-    </>
-  );
-}
 
 /* 3D Scene with lighting */
 function Scene3D() {
@@ -53,8 +31,7 @@ function Scene3D() {
         <MachineScene status="healthy" />
       </Float>
 
-      {/* Annotations */}
-      <SceneAnnotations />
+
 
       {/* Ground reflection */}
       <ContactShadows
