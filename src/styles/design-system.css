@@ -218,6 +218,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scrollbar-gutter: stable;
+  overflow-y: scroll; /* Always show scrollbar to prevent layout shift */
 }
 
 body {
