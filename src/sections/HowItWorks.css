@@ -158,3 +158,26 @@
     flex: 1 1 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .howitworks {
+    padding-bottom: 4rem;
+  }
+
+  .howitworks__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .howitworks__canvas-container {
+    height: 160px;
+  }
+
+  .howitworks__step-wrapper {
+    min-width: 100%;
+  }
+
+  .howitworks__steps {
+    gap: var(--space-6);
+    overflow-x: hidden;
+  }
+}

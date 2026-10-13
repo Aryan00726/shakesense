@@ -190,3 +190,35 @@
     flex: 0 0 85vw;
   }
 }
+
+@media (max-width: 480px) {
+  .apps__gallery-wrapper {
+    margin-bottom: var(--space-16);
+  }
+
+  .apps__card {
+    flex: 0 0 90vw;
+    padding: var(--space-5);
+  }
+
+  .apps__header {
+    margin-bottom: var(--space-6);
+  }
+
+  .flywheel {
+    padding: var(--space-5);
+  }
+
+  .flywheel__title {
+    font-size: var(--text-2xl);
+  }
+
+  .flywheel__visual {
+    height: 220px;
+  }
+
+  .flywheel__circle {
+    width: 150px;
+    height: 150px;
+  }
+}

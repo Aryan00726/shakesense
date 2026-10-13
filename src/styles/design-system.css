@@ -288,6 +288,24 @@ body {
   padding: var(--space-section) 0;
 }
 
+@media (max-width: 640px) {
+  .section {
+    padding: clamp(3rem, 8vw, 5rem) 0;
+  }
+
+  .container {
+    padding: 0 var(--space-4);
+  }
+
+  .section-title {
+    font-size: var(--text-4xl);
+  }
+
+  .section-subtitle {
+    font-size: var(--text-xs);
+  }
+}
+
 /* ── TYPOGRAPHY UTILITIES ── */
 .text-gradient {
   background: linear-gradient(135deg, var(--color-accent) 0%, #7c3aed 50%, var(--color-accent-strong) 100%);

@@ -201,3 +201,26 @@
     gap: var(--space-8);
   }
 }
+
+@media (max-width: 480px) {
+  .fingerprint__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .fingerprint__canvas {
+    width: 220px;
+    height: 220px;
+  }
+
+  .fingerprint__metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .fingerprint__score-value {
+    font-size: var(--text-3xl);
+  }
+
+  .fingerprint__profile {
+    padding: var(--space-5);
+  }
+}

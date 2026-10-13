@@ -127,3 +127,27 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 480px) {
+  .problem__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .problem__sequence {
+    margin-bottom: var(--space-8);
+  }
+
+  .problem__stage-indicator {
+    width: 80px;
+    height: 40px;
+  }
+
+  .problem__pains {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .problem__pain {
+    padding: var(--space-4);
+  }
+}

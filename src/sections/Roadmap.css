@@ -196,3 +196,22 @@
     right: auto;
   }
 }
+
+@media (max-width: 480px) {
+  .roadmap__header {
+    margin-bottom: var(--space-10);
+  }
+
+  .roadmap__phase,
+  .roadmap__phase:nth-child(even) {
+    padding-left: 40px;
+  }
+
+  .roadmap__phase-content {
+    padding: var(--space-4);
+  }
+
+  .roadmap__phase-label {
+    font-size: var(--text-base);
+  }
+}

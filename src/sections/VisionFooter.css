@@ -171,3 +171,28 @@
     text-align: center;
   }
 }
+
+@media (max-width: 480px) {
+  .vision {
+    min-height: 60vh;
+    padding: var(--space-16) var(--space-4);
+  }
+
+  .vision__title {
+    font-size: var(--text-3xl);
+  }
+
+  .vision__subtitle {
+    font-size: var(--text-sm);
+    letter-spacing: var(--tracking-wide);
+  }
+
+  .footer {
+    padding: var(--space-8) 0 var(--space-6);
+  }
+
+  .footer__top {
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+}

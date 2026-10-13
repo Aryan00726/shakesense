@@ -139,3 +139,32 @@
     padding-top: 0;
   }
 }
+
+@media (max-width: 640px) {
+  .tech__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+
+  .tech__card {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  .tech__card-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: var(--space-4);
+  }
+
+  .tech__comparison-title {
+    font-size: var(--text-2xl);
+  }
+
+  .tech__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .tech__cards {
+    margin-bottom: var(--space-12);
+  }
+}
