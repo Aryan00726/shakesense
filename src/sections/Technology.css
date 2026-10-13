@@ -142,12 +142,13 @@
 
 @media (max-width: 640px) {
   .tech__cards {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-3);
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12);
   }
 
   .tech__card {
-    padding: var(--space-6) var(--space-4);
+    padding: var(--space-6) var(--space-5);
   }
 
   .tech__card-icon {
@@ -162,9 +163,5 @@
 
   .tech__header {
     margin-bottom: var(--space-8);
-  }
-
-  .tech__cards {
-    margin-bottom: var(--space-12);
   }
 }

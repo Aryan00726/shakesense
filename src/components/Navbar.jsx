@@ -59,7 +59,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}
+      className={`navbar ${scrolled ? 'navbar--scrolled' : ''} ${mobileOpen ? 'navbar--open' : ''}`}
       role="navigation"
       aria-label="Main navigation"
     >

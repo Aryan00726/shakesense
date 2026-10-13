@@ -32,7 +32,7 @@ export default function ArchitectureDiagram() {
           <span className="eyebrow">ARCHITECTURE</span>
           <h2 className="section-title">System Data Flow</h2>
           <p className="section-subtitle" style={{ margin: '0 auto' }}>
-            Hover over each component to understand how data flows through the system.
+            Tap or hover over each component to understand how data flows through the system.
           </p>
         </motion.div>
 
@@ -73,6 +73,7 @@ export default function ArchitectureDiagram() {
                   transition={{ delay: 0.3 + i * 0.08, duration: 0.6 }}
                   onMouseEnter={() => setHoveredNode(node.id)}
                   onMouseLeave={() => setHoveredNode(null)}
+                  onClick={() => setHoveredNode(hoveredNode === node.id ? null : node.id)}
                   tabIndex={0}
                   onFocus={() => setHoveredNode(node.id)}
                   onBlur={() => setHoveredNode(null)}
@@ -87,7 +88,7 @@ export default function ArchitectureDiagram() {
                   {/* Connection dot */}
                   <div className="architecture__node-dot" />
 
-                  {/* Tooltip */}
+                  {/* Desktop Tooltip */}
                   <AnimatePresence>
                     {isHovered && (
                       <motion.div
@@ -105,6 +106,39 @@ export default function ArchitectureDiagram() {
                 </motion.div>
               );
             })}
+          </div>
+
+          {/* Mobile active node detail card */}
+          <div className="architecture__mobile-detail">
+            <AnimatePresence mode="wait">
+              {hoveredNode ? (
+                <motion.div
+                  key={hoveredNode}
+                  className="architecture__mobile-card"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="architecture__mobile-card-header">
+                    <span className="architecture__mobile-card-icon">
+                      {nodeIcons[hoveredNode] || '◆'}
+                    </span>
+                    <span className="architecture__mobile-card-title">
+                      {ARCHITECTURE.nodes.find(n => n.id === hoveredNode)?.label}
+                    </span>
+                  </div>
+                  <p className="architecture__mobile-card-desc">
+                    {ARCHITECTURE.nodes.find(n => n.id === hoveredNode)?.description}
+                  </p>
+                </motion.div>
+              ) : (
+                <div className="architecture__mobile-hint">
+                  <span className="architecture__mobile-hint-dot" />
+                  Tap any node above to inspect data flow
+                </div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

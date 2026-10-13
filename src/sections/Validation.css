@@ -201,6 +201,20 @@
 @media (max-width: 768px) {
   .business__grid {
     grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .business__flow {
+    align-items: center;
+    width: 100%;
+  }
+
+  .business__flow-arrow {
+    margin-left: 0;
+  }
+
+  .business__pricing {
+    margin: 0 auto;
   }
 }
 
@@ -212,21 +226,29 @@
 
   .business__flow-box {
     max-width: 100%;
+    padding: var(--space-3) var(--space-4);
   }
 
   .business__pricing {
     max-width: 100%;
+    padding: var(--space-3) var(--space-4);
   }
 
   .metrics__grid {
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
   }
 
   .metrics__card {
-    padding: var(--space-5) var(--space-3);
+    padding: var(--space-4) var(--space-2);
   }
 
   .metrics__value {
-    font-size: var(--text-base);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+  }
+
+  .metrics__label {
+    font-size: 10px;
   }
 }

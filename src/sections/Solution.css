@@ -150,16 +150,30 @@
 @media (max-width: 768px) {
   .solution__pipeline {
     grid-template-columns: 1fr 1fr;
-    gap: var(--space-8);
+    gap: var(--space-6);
   }
 
   .solution__line {
     display: none;
+  }
+
+  .solution__step-desc {
+    max-width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .solution__pipeline {
     grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .solution__header {
+    margin-bottom: var(--space-8);
+  }
+
+  .solution__step-desc {
+    max-width: 260px;
+    font-size: var(--text-xs);
   }
 }
